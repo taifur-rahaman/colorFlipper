@@ -1,14 +1,92 @@
+:root {
+  --nav-height: 8vh;
+  --nav-color: #489bde;
+}
+
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial;
+  background-color: #f1f5f8;
+  font-family: "Core Sans", "Helvetica Neue", sans-serif;
+}
+
+.nav-center {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  align-items: center;
+  height: var(--nav-height);
+  background-color: #fff;
+  box-shadow: 4px 14px 15px 1px rgba(0, 0, 0, 0.1);
+}
+
+.nav-center h4 {
+  color: var(--nav-color);
+  text-transform: capitalize;
+  margin: 20px;
+  letter-spacing: 3px;
+}
+
+.nav-links {
+  display: flex;
+  margin-right: 20px;
+}
+
+.nav-links li {
+  list-style-type: none;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #222;
+  margin-right: 20px;
+  text-transform: capitalize;
+  letter-spacing: 3px;
+}
+
+main {
   display: flex;
   justify-content: center;
-  height: 100vh;
   align-items: center;
-  overflow: hidden;
-  margin: 0;
-  background-color: #f9f9f9;
+  height: calc(100vh - var(--nav-height));
+}
+
+.container {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.container h2 {
+  background-color: #222;
+  color: #fff;
+  padding: 30px;
+  letter-spacing: 5px;
+  text-transform: capitalize;
+  border-radius: 10px;
+}
+
+.container h2 span {
+  text-transform: lowercase;
+  color: var(--nav-color);
+}
+
+.btn {
+  text-transform: uppercase;
+  padding: 15px 30px;
+  margin: 30px 0;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: var(--nav-color);
+  color: #fff;
+  border-color: transparent;
 }
